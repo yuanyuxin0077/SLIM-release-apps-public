@@ -5,23 +5,23 @@
  (including 3-rd party prerequisites) necessary to demonstrate and use
  algorithms developed by SLIM's researchers. SLIM's software release is
  organized in two repositories:
-### 1.1 Repository SLIM-release-apps - this repository
- Repository at [SLIM-release-apps]
- (https://github.com/SINBADconsortium/SLIM-release-apps) contains core
+### 1.1 Repository SLIM-release-apps-public - this repository
+ Repository at [SLIM-release-apps-public]
+ (https://github.com/SINBADconsortium/SLIM-release-apps-public) contains core
  of SLIM's software, i.e. all applications, algorithms, tools, and
  utilities. The software in this repository requires minimal
  installation, but some of the applications depend on installation of
- SLIM-release-comp listed below.
+ SLIM-release-comp-public listed below.
  
- Note that each user must have a private copy of SLIM-release-apps in
+ Note that each user must have a private copy of SLIM-release-apps-public in
  order to to run any applications, since an application is configured
  to look for data and create directories inside of application's
  directory. See INSTALLATION file for possible installation strategies.
-### 1.2 Repository SLIM-release-comp
- Repository at [SLIM-release-comp]
- (https://github.com/SINBADconsortium/SLIM-release-comp) containing
+### 1.2 Repository SLIM-release-comp-public
+ Repository at [SLIM-release-comp-public]
+ (https://github.com/SINBADconsortium/SLIM-release-comp-public) containing
  extra 3rd-part software for multi-user installation - not needed for
- some applications from repository SLIM-release-apps. The installation
+ some applications from repository SLIM-release-apps-public. The installation
  of software from this repository may be shared by multiple users and
  may require lengthy installation.  See INSTALLATION file for possible
  installation strategies.
@@ -38,9 +38,9 @@
  this repository for more information). In addition, the installation
  requires GNU gcc/g++ compilers that come with the operating system.
  Included in this repository are:
-### 3.1 Software packages in SLIM-release-comp repository
- Those packages are listed in README of SLIM-release-comp repository.
-### 3.2 Software packages in SLIM-release-apps (this) repository
+### 3.1 Software packages in SLIM-release-comp-public repository
+ Those packages are listed in README of SLIM-release-comp-public repository.
+### 3.2 Software packages in SLIM-release-apps-public (this) repository
 #### 3.2.1 3rd-party software packages
  [NFFT] (https://www-user.tu-chemnitz.de/~potts/nfft/) - native MATLAB
  implementation  
@@ -52,8 +52,8 @@
  Follow the instructions in the INSTALLATION file in this repository to
  install core of SLIM's software and create necessary scripts to
  configure your environment. If installation of 3rd-part software from
- SLIM-release-comp is required, follow the instructions in INSTALLATION
- file of SLIM-release-comp before you install software in this
+ SLIM-release-comp-public is required, follow the instructions in INSTALLATION
+ file of SLIM-release-comp-public before you install software in this
  repository. You will need to have MATLAB installed and added to your
  PATH environment before you can proceed. If you encounter any problems
  during the installation, please, let us know. See SUPPORT section at
@@ -68,23 +68,23 @@
  or MATLAB executables are missing from your shell's PATH environment.
 ### 5.1 Importing shell environment
  In order to import shell environment you will have to source one of
- the scripts in the home of SLIM-release-apps. 
-#### 5.1.1 From the home of SLIM-release-apps
+ the scripts in the home of SLIM-release-apps-public. 
+#### 5.1.1 From the home of SLIM-release-apps-public
  In the terminal window and once per terminal session, change directory
- to the home of SLIM-release-apps and do either of the following:
+ to the home of SLIM-release-apps-public and do either of the following:
 ##### 5.1.1.1 in bash-like shell execute
  	. environment.sh
 ##### 5.1.1.2 in csh-like shell execute
  	source environment.csh
 #### 5.1.2 From another location
  If you want to source either of those scripts from the location other
- then the home of SLIM-release-apps (like from your shell's startup
+ then the home of SLIM-release-apps-public (like from your shell's startup
  scripts). Then, in the terminal window (and only once per terminal
  session) do either of the following from any location:
 ##### 5.1.2.1 in bash-like shell execute
- 	. path_to-SLIM-release-apps/environment.sh
+ 	. path_to-SLIM-release-apps-public/environment.sh
 ##### 5.1.2.2 in csh-like shell execute
- 	source path_to-SLIM-release-apps/environment.csh
+ 	source path_to-SLIM-release-apps-public/environment.csh
 ##### 5.1.2.3 optional for interactive jobs and obligatory for batch submission
  Add the appropriate one of the above to your default-shell's startup
  script to make the permanent change to the environment. You will not
@@ -262,7 +262,7 @@
  
 #### 9.1.35 applications/SoftwareDemos/iWAVE
  Examples for using iWAVE interface for different applications
-### 9.2 Tools in SLIM-release-apps
+### 9.2 Tools in SLIM-release-apps-public
 #### 9.2.1 tools/algorithms/CommonFreqModeling
  Common tools for frequency-domain acoustic modelling
 #### 9.2.2 tools/algorithms/2DFreqModeling
@@ -304,7 +304,7 @@
  Parallel extensions to SPOT.
 #### 9.2.19 tools/utilities/iWAVE
  MATLAB interface to running iWAVE
-### 9.3 Tools in SLIM-release-comps
+### 9.3 Tools in SLIM-release-comp-publics
 #### 9.3.1 tools/transforms/CurveLab-2.1.2-SLIM
  SLIM's version of CurveLab 2.1.2 - curvelet transform.
 ## 10 SUPPORT

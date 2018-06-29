@@ -18,43 +18,43 @@
  the prerequisites are missing or the included web site for specific
  instructions suitable for your operating system.
  
- Note! This document covers only installation of SLIM-release-apps part
- of software release. For notes on installation of SLIM-release-comp
- refer to INSTALLATION file in SLIM-release-comp repository.
+ Note! This document covers only installation of SLIM-release-apps-public part
+ of software release. For notes on installation of SLIM-release-comp-public
+ refer to INSTALLATION file in SLIM-release-comp-public repository.
 ## 2 INSTALLATION STRATEGIES
  Here are the potential strategies for installing our software in
  single-/multi-user environment.
  
  Note, that each user must have a personal (or at the very least has to
- have write permissions) copy of SLIM-release-apps in order to to run
+ have write permissions) copy of SLIM-release-apps-public in order to to run
  any applications, since each application is configured to look for
  data and create directories inside of its own directory.
 ### 2.1 Complete user-owned installation
- Personal installation for single user, both SLIM-release-comp and
- SLIM-release-apps.
+ Personal installation for single user, both SLIM-release-comp-public and
+ SLIM-release-apps-public.
  
- User installs both SLIM-release-comp and SLIM-release-apps in personal
+ User installs both SLIM-release-comp-public and SLIM-release-apps-public in personal
  directories.
-### 2.2 Multi-user SLIM-release-comp installation
- Multi-user installation of SLIM-release-comp and personal installation
- of SLIM-release-apps. 
+### 2.2 Multi-user SLIM-release-comp-public installation
+ Multi-user installation of SLIM-release-comp-public and personal installation
+ of SLIM-release-apps-public. 
  
- Designated person instals SLIM-release-comp in common directory and
- user installs personal SLIM-release-apps.
+ Designated person instals SLIM-release-comp-public in common directory and
+ user installs personal SLIM-release-apps-public.
 ### 2.3 Full multi-user installation
- Multi-user installation of SLIM-release-comp, multi-user installation
- of SLIM-release-apps, and personal copy of SLIM-release-apps
+ Multi-user installation of SLIM-release-comp-public, multi-user installation
+ of SLIM-release-apps-public, and personal copy of SLIM-release-apps-public
  
- Designated person instals both SLIM-release-comp and SLIM-release-apps
+ Designated person instals both SLIM-release-comp-public and SLIM-release-apps-public
  in common directories, and user obtains personal copy of
- SLIM-release-apps (no installation needed).
+ SLIM-release-apps-public (no installation needed).
 ## 3 DOWNLOADING
  In terminal, change directory to the location where you want to
  install the software and execute the following git command:
  
- 	git clone git@github.com:SINBADconsortium/SLIM-release-apps.git
+ 	git clone git@github.com:SINBADconsortium/SLIM-release-apps-public.git
  
- and the cloned software will be in SLIM-release-apps sub-directory.
+ and the cloned software will be in SLIM-release-apps-public sub-directory.
 ## 4 GIT BRANCHES
  SLIM is using master branch to develop/add software to repository. To
  avoid using the software that is not complete or fully tested, you
@@ -68,7 +68,7 @@
 ### 5.1 Prepare environment.* script
 #### 5.1.1 Make a copy of appropriate environment.* script template
  Open terminal window, change directory to the home of
- SLIM-release-apps and do either of the following:
+ SLIM-release-apps-public and do either of the following:
 ##### 5.1.1.1 in bash-like shell execute
  	cp environment.sh.template environment.sh
 ##### 5.1.1.2 in csh-like shell execute
@@ -77,41 +77,41 @@
  Edit the file created above in an editor and make the following
  changes  accordingly to chosen installation strategy.
  
- Note: if you skipped the installation of SLIM-release-comp, leave
+ Note: if you skipped the installation of SLIM-release-comp-public, leave
  SLIM_COMP environment as it is in any of the options below.
 ##### 5.1.2.1 Complete user-owned installation
- In personal SLIM-release-apps/environment.{sh,csh}:
+ In personal SLIM-release-apps-public/environment.{sh,csh}:
  
  - SLIM_COMP points to absolute path of user's personal
- SLIM-release-comp  
+ SLIM-release-comp-public  
  - SLIM_APPS points to absolute path of user's personal
- SLIM-release-apps  
+ SLIM-release-apps-public  
  - SLIM_APPS_RUNS points to $SLIM_APPS  
  
-##### 5.1.2.2 Multi-user SLIM-release-comp installation
- In personal SLIM-release-apps/environment.{sh,csh}:
+##### 5.1.2.2 Multi-user SLIM-release-comp-public installation
+ In personal SLIM-release-apps-public/environment.{sh,csh}:
  
- - SLIM_COMP points to absolute path of common SLIM-release-comp  
+ - SLIM_COMP points to absolute path of common SLIM-release-comp-public  
  - SLIM_APPS points to absolute path of user's personal
- SLIM-release-apps  
+ SLIM-release-apps-public  
  - SLIM_APPS_RUNS points to $SLIM_APPS  
  
 ##### 5.1.2.3 Full multi-user installation
- In common SLIM-release-apps/environment.{sh,csh}:
+ In common SLIM-release-apps-public/environment.{sh,csh}:
  
- - SLIM_COMP points to absolute path of common SLIM-release-comp  
- - SLIM_APPS points to absolute path of common SLIM-release-apps  
+ - SLIM_COMP points to absolute path of common SLIM-release-comp-public  
+ - SLIM_APPS points to absolute path of common SLIM-release-apps-public  
  - SLIM_APPS_RUNS points to $SLIM_APPS  
  
- In personal SLIM-release-apps/environment.{sh,csh}:
+ In personal SLIM-release-apps-public/environment.{sh,csh}:
  
- - SLIM_COMP points to absolute path of common SLIM-release-comp  
- - SLIM_APPS points to absolute path of common SLIM-release-apps  
+ - SLIM_COMP points to absolute path of common SLIM-release-comp-public  
+ - SLIM_APPS points to absolute path of common SLIM-release-apps-public  
  - SLIM_APPS_RUNS points to absolute path of user's personal
- SLIM-release-apps  
+ SLIM-release-apps-public  
  
 ### 5.2 Importing shell environment
- In terminal window, in the home of SLIM-release-apps do either of the
+ In terminal window, in the home of SLIM-release-apps-public do either of the
  following:
 #### 5.2.1 in bash-like shell execute
  	. environment.sh
@@ -122,9 +122,9 @@
  permanent change to the environment. You will not need then to source
  environment.sh/csh manually.
 ##### 5.3.1 for bash-like shell add
- 	. path_to-SLIM-release-apps/environment.sh
+ 	. path_to-SLIM-release-apps-public/environment.sh
 ##### 5.3.2 for csh-like shell add
- 	source path_to-SLIM-release-apps/environment.csh
+ 	source path_to-SLIM-release-apps-public/environment.csh
 ### 5.4 Testing the environment
  Once configured, you can check if the SLIM_COMP , SLIM_APPS, and
  SLIM_APPS_RUNS  environments are set correctly and verify if MATLAB
@@ -214,13 +214,13 @@
  The test for Linearized Bregman method. It should report `PASSED`.
 #### 8.1.6 2D Curvelet transform.
  This test runs a dot-test for 2D curvelet interface, and only if
- SLIM-release-comp is installed. It should report `PASSED`.
+ SLIM-release-comp-public is installed. It should report `PASSED`.
 #### 8.1.7 3D Curvelet transform.
  This test runs a dot-test for 3D curvelet interface, and only if
- SLIM-release-comp is installed. It should report `PASSED`.
+ SLIM-release-comp-public is installed. It should report `PASSED`.
 #### 8.1.8 MATLAB for RSF
  This a short test to check MATLAB's RSF interface, and only if
- SLIM-release-comp is installed.  It should report `PASSED`.
+ SLIM-release-comp-public is installed.  It should report `PASSED`.
 #### 8.1.9 Tests in tools/algorithms/3DFreqModeling
  Series of tests for algorithm in tools/algorithms/3DFreqModeling. It
  should report `PASSED`.
